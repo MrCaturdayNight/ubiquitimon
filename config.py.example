@@ -1,0 +1,14 @@
+# Ubiquiti config
+item_description = "Toolless Mini Rack"
+producturl = "https://store.ui.com/collections/unifi-accessories/products/toolless-mini-rack"
+
+# General config
+
+# The script will pick a random number of seconds between the following values. This was
+# in the hopes of not upsetting the Ubiquiti website admins :)
+mintime = 300
+maxtime = 1200
+
+# Pushover config
+pushovertoken = "<your_token_here>"
+pushoveruser = "<your_user_here>"
