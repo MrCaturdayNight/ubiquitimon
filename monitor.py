@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
 import http.client
-import urllib
-from time import sleep
-import urllib.request
-import random
 import logging
+import random
+import urllib
+import urllib.request
+from time import sleep
+
 import config
 
 
