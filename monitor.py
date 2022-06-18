@@ -37,8 +37,22 @@ def main():
             ),
             {"Content-type": "application/x-www-form-urlencoded"},
         )
-        if conn.getresponse() != "200":
-            logging.error("An error was returned from pushover.net")
+        conn.getresponse()
+
+    conn = http.client.HTTPSConnection("api.pushover.net:443")
+    conn.request(
+        "POST",
+        "/1/messages.json",
+        urllib.parse.urlencode(
+            {
+                "token": "abc123",
+                "user": "user123",
+                "message": "hello world",
+            }
+        ),
+        {"Content-type": "application/x-www-form-urlencoded"},
+    )
+    conn.getresponse()
 
     def checkstatus(notifiedfunc):
         logging.info("Checking URL.")
