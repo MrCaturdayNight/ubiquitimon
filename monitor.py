@@ -90,8 +90,7 @@ def main():
     notified = False
 
     while True:
-        # seconds = random.randint(config.mintime, config.maxtime)
-        seconds = random.randint(30, 60)
+        seconds = random.randint(config.mintime, config.maxtime)
         logging.info("Sleeping " + str(seconds) + " seconds.")
         sleep(seconds)
         notified = checkstatus(notified)
