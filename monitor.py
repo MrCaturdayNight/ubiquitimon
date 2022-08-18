@@ -77,6 +77,8 @@ def main():
 
     notified = False
 
+    logging.info("monitor.py has started.")
+    logging.info("Monitoring for \"" + config.item_description + "\" at URL " + config.producturl)
     while True:
         seconds = random.randint(config.mintime, config.maxtime)
         logging.info("Sleeping " + str(seconds) + " seconds.")
